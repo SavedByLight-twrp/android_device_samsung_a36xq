@@ -52,6 +52,11 @@ PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
     android.hardware.health@2.1-service
 
+# QCOM
+PRODUCT_PACKAGES += \
+    qcom_decrypt \
+    qcom_decrypt_fbe
+
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
