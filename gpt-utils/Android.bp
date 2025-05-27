@@ -15,7 +15,7 @@
 //
 
 cc_defaults {
-    name: "libgptutils.tapas",
+    name: "libgptutils.a36xq",
     export_include_dirs: ["."],
     recovery_available: true,
     shared_libs: [
