@@ -19,29 +19,16 @@ AB_OTA_PARTITIONS += \
     system_ext \
     vendor_boot
 
-# Boot control
-PRODUCT_PACKAGES += \
-    android.hardware.boot@1.2-impl-qti.recovery \
-    bootctrl.parrot.recovery
-
-PRODUCT_PACKAGES += \
-    update_engine \
-    update_engine_sideload \
-    update_verifier
-
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=erofs \
     POSTINSTALL_OPTIONAL_system=true
 
+# Boot control
 PRODUCT_PACKAGES += \
-    checkpoint_gc \
-    otapreopt_script
-
-# API levels
-BOARD_API_LEVEL := 32
-PRODUCT_SHIPPING_API_LEVEL := 32
+    android.hardware.boot@1.2-impl-qti.recovery \
+    bootctrl.parrot.recovery
 
 # fastbootd
 PRODUCT_PACKAGES += \
