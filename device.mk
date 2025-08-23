@@ -1,5 +1,23 @@
 LOCAL_PATH := device/samsung/a36x
 
+A/B
+$(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+AB_OTA_UPDATER := true
+AB_OTA_PARTITIONS += \
+    system_dlkm \
+    vendor \
+    dtbo \
+    init_boot \
+    vbmeta \
+    odm \
+    system \
+    vbmeta_system \
+    boot \
+    product \
+    vendor_dlkm \
+    system_ext \
+    vendor_boot
+
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti.recovery \

@@ -1,22 +1,5 @@
 DEVICE_PATH := device/samsung/a36xq
 
-# A/B
-AB_OTA_UPDATER := true
-AB_OTA_PARTITIONS += \
-    system_dlkm \
-    vendor \
-    dtbo \
-    init_boot \
-    vbmeta \
-    odm \
-    system \
-    vbmeta_system \
-    boot \
-    product \
-    vendor_dlkm \
-    system_ext \
-    vendor_boot
-
 # Architecture
 TARGET_ARCH := arm64
 TARGET_ARCH_VARIANT := armv8-a
