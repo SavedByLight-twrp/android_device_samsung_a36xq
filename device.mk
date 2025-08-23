@@ -1,5 +1,6 @@
 A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
+
 AB_OTA_UPDATER := true
 
 AB_OTA_PARTITIONS += \
@@ -15,31 +16,31 @@ AB_OTA_PARTITIONS += \
     product \
     vendor_dlkm \
     system_ext \
-    vendor_boot
+    vendor_boot \
 
 AB_OTA_POSTINSTALL_CONFIG += \
     RUN_POSTINSTALL_system=true \
     POSTINSTALL_PATH_system=system/bin/otapreopt_script \
     FILESYSTEM_TYPE_system=erofs \
-    POSTINSTALL_OPTIONAL_system=true
+    POSTINSTALL_OPTIONAL_system=true \
 
 # Boot control
 PRODUCT_PACKAGES += \
     android.hardware.boot@1.2-impl-qti.recovery \
-    bootctrl.parrot.recovery
+    bootctrl.parrot.recovery \
 
 # fastbootd
 PRODUCT_PACKAGES += \
     android.hardware.fastboot@1.1-impl-mock \
-    fastbootd
+    fastbootd \
 
 # Health
 PRODUCT_PACKAGES += \
     android.hardware.health@2.1-impl \
-    android.hardware.health@2.1-service
+    android.hardware.health@2.1-service \
 
 # Partitions
-PRODUCT_USE_DYNAMIC_PARTITIONS := true
+PRODUCT_USE_DYNAMIC_PARTITIONS := true \
 
 # Soong namespaces
 PRODUCT_SOONG_NAMESPACES += \
