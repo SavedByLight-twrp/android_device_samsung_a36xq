@@ -3,6 +3,7 @@ LOCAL_PATH := device/samsung/a36x
 A/B
 $(call inherit-product, $(SRC_TARGET_DIR)/product/virtual_ab_ota/launch_with_vendor_ramdisk.mk)
 AB_OTA_UPDATER := true
+
 AB_OTA_PARTITIONS += \
     system_dlkm \
     vendor \
