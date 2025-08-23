@@ -10,6 +10,7 @@ ro.charger.enable_suspend=1
 
 # ADB
 ro.adb.secure=0
+
 # USB
 vendor.usb.use_ffs_mtp=1
 persist.sys.usb.config=mtp,adb
